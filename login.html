@@ -4,31 +4,67 @@
         <link rel="stylesheet" href="style/login.css">
     </head>
     <body>
-        <form action="action_page.php" method="post">
+      <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        
 
 
-            <div class="imgcontainer">
-              <img src="log-in.png" alt="Avatar" class="avatar">
-            </div>
+        <div class="img-container">
+            <a href="login.html">
+            <img src="log-in.png" alt="Profile Image">
+        </a>
+        </div>
+      </div>
 
-            <p>Welcome to PostIt
-            </p>
+        
+
+
+      <div class="login-container">
+
+
+           
+
+            <p>Welcome to PostIt</p>
+            <p>   </p>
+            <p><a href="index.html">Create an Account</a></p>
+            <p>or</p>
+            <p>Please log in</p>
+            
             
 
           
-            <div class="container">
+            
+            
+              <div class="email">
+                  <input type="text" id="email" name="email" placeholder="Email">
+              </div>
+
+
               
-              <input type="text" placeholder="Email" name="uname" required>
+                <div class="pass">
+                    <input type="text" id="pass" name="pass" placeholder="Password">
+                </div>
+              
+          
+                
+                <a href="index.html">
+                  <button type="login">Log-In</button>
+                </a>
+
+                <p><a href="index.html">Forget Password</a></p>
+
+                
+
+              
+              
           
               
-              <input type="password" placeholder="Password" name="psw" required>
-          
-              <button type="submit">Login</button>
-              <button type="f">Forget Password</button>
+
+              
 
             </div>
 
-          </form>
+          
     </body>
 
 </html>

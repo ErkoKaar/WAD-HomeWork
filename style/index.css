@@ -1,38 +1,46 @@
-/* Add a black background color to the top navigation */
 .topnav {
-    background-color: #8e8282;
-    overflow: hidden;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
+  background-color: #868686;
+  overflow: hidden;
+  width: 100%;
+  position: fixed; /* Fix the navigation bar at the top */
+  top: 0; /* Position it at the top of the screen */
+  padding: 0;
+  left: 0;
+}
 
-  .img-container {
-    float: right;
-    padding: 5px;
+/* Style the links inside the navigation bar */
+.topnav a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  position: relative; /* Add relative positioning */
+}
+
+/* Add a vertical line after each link, except the last one */
+.topnav a:not(:last-child)::after {
+  content: '|';
+  position: absolute;
+  top: 50%; /* Center the line vertically */
+  right: -8px; /* Adjust the position of the line */
+  transform: translateY(-50%); /* Center the line vertically */
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.img-container {
+  float: right;
+  padding: 5px;
 }
 
 .img-container img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
