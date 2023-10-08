@@ -1,0 +1,138 @@
+.topnav {
+  background-color: #868686;
+  overflow: hidden;
+  width: 100%;
+  position: fixed; /* Fix the navigation bar at the top */
+  top: 0; /* Position it at the top of the screen */
+  padding: 0;
+  left: 0;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  position: relative; /* Add relative positioning */
+}
+
+/* Add a vertical line after each link, except the last one */
+.topnav a:not(:last-child)::after {
+  content: '|';
+  position: absolute;
+  top: 50%; /* Center the line vertically */
+  right: -8px; /* Adjust the position of the line */
+  transform: translateY(-50%); /* Center the line vertically */
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.img-container {
+  float: right;
+  padding: 5px;
+}
+
+.img-container img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Content area styles using Flexbox */
+.content-area {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 60px; /* Give space for the fixed topnav */
+  margin: 20px; /* Margin for spacing */
+}
+
+.sidebox {
+  background-color: #b5b5b5;
+  width: 15%; 
+  border-radius: 10px;
+  height: calc(100vh - 80px); /* Fill the screen height minus topnav and margins */
+}
+
+.posts {
+  width: 68%;
+  display: flex;
+  flex-direction: column; /* Stack posts vertically */
+  gap: 20px; /* Gap between posts */
+}
+
+.post {
+  background-color: #d0d0d0;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-pic {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.post-date {
+  color: #777;
+}
+
+.post-content {
+  margin-top: 10px;
+}
+
+.post-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #868686;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+/* Required selectors */
+/* Descendant Selector */
+.content-area .post {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Child Selector */
+.content-area > .sidebox {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjacent Sibling Selector */
+.posts .post + .post {
+  border-top: 1px solid #c5c5c5;
+}
+
+/* General Sibling Selector */
+.topnav a.active ~ a {
+  font-weight: bold;
+}
+
+/* Pseudo-class */
+.posts .post:nth-child(odd) {
+  background-color: #c5c5c5;
+}
+
+
