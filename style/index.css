@@ -62,10 +62,12 @@
 
 .footer {
   background-color: #868686;
-  color: white;
+  color: black;
+  font-size: x-large;
   text-align: center;
   padding: 10px 0;
   margin-top: 20px;
+  border-radius: 10px;
 }
 
 .content-area .post {

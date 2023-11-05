@@ -8,20 +8,21 @@
 
     <body>
 
-    <div class="topnav">
-
-        
-        <a class="active" href="index.html">Home</a>
-
-        
-
-        <div class="img-container">
-            <a href="login.html">
-            <img src="log-in.png" alt="Profile Image">
-        </a>
+        <div class="topnav">
+            <a class="active" href="index.html">Home</a>
+    
+            <div class="img-container" id="profileDropdown">
+                    <img src="log-in.png" alt="Profile Image" id="profileImage">
+                    
+                    <div class="dropdown-content" id="dropdownContent">
+                        <a href="#">John Doe</a>
+                        <a href="#">john.doe@ut.ee</a>
+                        <a href="login.html">logout</a>
+    
+                    </div>
+                
+            </div>
         </div>
-    </div>
-
 
 
         <div class="post-container">
@@ -43,6 +44,6 @@
             </div>
             </div>
 
-      
+            <script src="main.js"></script>
     </body>
 </html>

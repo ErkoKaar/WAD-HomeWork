@@ -55,15 +55,13 @@ async function fetchPosts() {
 // Call the function to fetch and display posts when the page loads
 fetchPosts();
 
-document.querySelector('.img-container img').onclick = function(event) {
-    var dropdownContent = document.querySelector('.dropdown-content');
-    if (dropdownContent.style.display === 'block') {
-      dropdownContent.style.display = 'none';
-    } else {
-      dropdownContent.style.display = 'block';
-    }
-      event.preventDefault();
-  };
+let profileImage = document.getElementById('profileImage');
+let dropdownContent = document.getElementById('dropdownContent');
+
+profileImage.addEventListener('click', function() {
+    let isDropdownVisible = dropdownContent.style.display === 'block'; //boolean variable to determine whether the drop-down menu is visible
+    dropdownContent.style.display = isDropdownVisible ? 'none' : 'block';
+});
   
 
 
