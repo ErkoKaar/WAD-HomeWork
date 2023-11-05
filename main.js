@@ -1,4 +1,4 @@
-// main.js
+
 
 // Function to fetch and display posts
 async function fetchPosts() {
@@ -54,3 +54,19 @@ async function fetchPosts() {
 
 // Call the function to fetch and display posts when the page loads
 fetchPosts();
+
+document.querySelector('.img-container img').onclick = function(event) {
+    var dropdownContent = document.querySelector('.dropdown-content');
+    if (dropdownContent.style.display === 'block') {
+      dropdownContent.style.display = 'none';
+    } else {
+      dropdownContent.style.display = 'block';
+    }
+      event.preventDefault();
+  };
+  
+
+
+
+
+
